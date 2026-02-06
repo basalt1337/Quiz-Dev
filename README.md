@@ -74,7 +74,7 @@ Projeto desenvolvido pela equipe de Engenharia de Software:
 | <img src="https://github.com/MadureiraHenrique.png" width="50"> | **Carlos Henrique** | *Tech Lead, Documentation, QA, Front-end(CSS & Style) & Back-end Logic* | [@MadureiraHenrique](https://github.com/MadureiraHenrique) |
 | <img src="https://github.com/basalt1337.png" width="50"> | **Ygor Morais** | *Back-end Logic & Front-end (CSS & Style)* | [@basalt1337](https://github.com/basalt1337) |
 | <img src="https://github.com/Sentaquelavem.png" width="50"> | **Pedro Luis** | *Structure HTML & Responsivity* | [@Sentaquelavem](https://github.com/Sentaquelavem) |
-| <img src="https://github.com/alezoka.png" width="50"> | **Alessandra Souza** | *Back-end Logic & Front-end(CSS & Style)* | [@User4](https://github.com/alezoka) |
+| <img src="https://github.com/alezoka.png" width="50"> | **Alessandra Souza** | *Back-end Logic & Front-end(CSS & Style)* | [@alezoka](https://github.com/alezoka) |
 
 ---
 
