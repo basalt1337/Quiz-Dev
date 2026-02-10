@@ -1,93 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import "./modules/win-screen.css";
+@import "./base/variables.css";
+@import "./state/state.css";
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-  overflow: hidden;
-  height: 100%;
-  margin: 0;
+.play-screen {
+  background-color: #8a63d2;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #8a63d2;
-  font-family: 'Comic Sans MS', cursive;
+  color: white;
+  font-family: "Comic Sans MS", cursive;
 }
 
-.playScreen {
-    background-color: #8a63d2;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Comic Sans MS', cursive;
+.play-screen__title {
+  text-decoration: underline rgba(89, 21, 199, 0.705);
+  justify-content: center;
+  font-size: 3rem;
+  display: flex;
 }
 
-.playScreen__tittle {
-    position: absolute;
-    top: 0px;
-    left: 43%;
-    font-size: 3rem;
-    text-decoration: underline rgba(89, 21, 199, 0.705);
-    display: flex;
-    justify-content: center;
+.play-screen__btn-play {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #00000086;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 0px 0px 20px white;
+  transition: 2ms background-color;
+  transition: 0.9s padding;
+  transition: 0.9s font-size;
+  font-size: 2rem;
+  color: #630fff;
+  padding: 20px 100px;
+  border-radius: 12px;
+  height: 100px;
+  cursor: pointer;
 }
 
-.playScreen__buttonPlay--active {
-    background-color: #00000086;
-    font-family: "Archivo Black", sans-serif;
-    font-size: 2rem;
-    color: #630fff;
-    padding: 20px 100px;
-    border: none;
-    border-radius: 12px;
-    height: 100px;
-    cursor: pointer;
+.play-screen__btn-play:hover {
+  background-color: green;
+  padding: 25px 140px;
+  font-size: 36px;
+  color: white;
 }
 
-.winScreen__quizSummery {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 200px;
+.win-screen__title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 200px;
 }
 
-.cardFinal {
+.result-card {
   background: white;
   width: 350px;
   border-radius: 40px;
   padding: 60px 20px 20px;
   text-align: center;
   position: relative;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.cardFinal__trophy {
+.result-card__trophy {
   position: absolute;
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 80px;
-}
-
-.cardFinal__statsGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-top: 1px solid #eee;
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.cardFinal__statsGrid__statItem {
-  border-right: 1px solid #eee;
-}
-
-.cardFinal__statsGrid__statItem:last-child {
-  border-right: none;
 }
