@@ -1,52 +1,69 @@
-@import './base/variables.css';
+@import "./modules/win-screen.css";
+@import "./base/variables.css";
+@import "./state/state.css";
 
-.initial-screen {
-    background-color: #8a63d2;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    gap: 20px;
+.play-screen {
+  background-color: #8a63d2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Comic Sans MS", cursive;
 }
 
-.main {
-    justify-content: center;
-    text-align: center;
-    display: flex;
+.play-screen__title {
+  text-decoration: underline rgba(89, 21, 199, 0.705);
+  justify-content: center;
+  font-size: 3rem;
+  display: flex;
 }
 
-.main-title {
-    text-decoration: underline rgba(89, 21, 199, 0.705);
-    font-size: 3rem;
+.play-screen__btn-play {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #00000086;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 0px 0px 20px white;
+  transition: 2ms background-color;
+  transition: 0.9s padding;
+  transition: 0.9s font-size;
+  font-size: 2rem;
+  color: #630fff;
+  padding: 20px 100px;
+  border-radius: 12px;
+  height: 100px;
+  cursor: pointer;
 }
 
-.container-logo {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    display: flex;
+.play-screen__btn-play:hover {
+  background-color: green;
+  padding: 25px 140px;
+  font-size: 36px;
+  color: white;
 }
 
-.btn-container {
-    width: auto;
+.win-screen__title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 200px;
 }
 
-.btn-begin {
-    font-family: "Archivo Black", sans-serif;
-    text-shadow: 2px 2px 2px black;
-    background-color: #00000086;
-    transition: transform 0.2s;
-    border-radius: 12px;
-    padding: 20px 100px;
-    color: #630fff;
-    cursor: pointer;
-    font-size: 2rem;
-    border: none;
+.result-card {
+  background: white;
+  width: 350px;
+  border-radius: 40px;
+  padding: 60px 20px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.btn-begin:hover {
-    transform: scale(1.05);
+.result-card__trophy {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
 }

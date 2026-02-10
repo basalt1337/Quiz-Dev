@@ -1,36 +1,57 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/css/style.css" />
-    <link rel="icon" href="./image/dev-icon.png" type="image/png" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="icon" href="/src/image/dev-icon.png" type="image/png">
     <title>Dev Quiz</title>
-  </head>
+</head>
 
-  <body>
-    <main>
-      <section class="initial-screen">
-        <header class="main">
-          <h1 class="main-title">Dev Quiz</h1>
-        </header>
+<body>
+    <section id="playScreen" class="screen play-screen">
+            <h1 class="play-screen__title">Dev Quiz</h1>
+            <img class="play-screen__icon" src="../src/image/quizlogo.png">
+            <button class="play-screen__btn-play">Jogar</button>
+    </section>
 
-        <div class="container-logo">
-          <img src="./image/quizlogo.png" />
+    <section id="winScreen" class="screen win-screen hidden">
+            <header class="win-screen__header">
+                <h1 class="win-screen__title">Quiz Summary</h1>
+            </header>
+
+            <main class="result-card">
+                <div class="result-card__trophy">🏆</div>
+                <h2 class="result-card__title">Congratulations!</h2>
+                <p class="result-card__score">You've scored <span>+80</span> points</p>
+
+                <div class="stat-grid">
+
+                    <div class="stat-box">
+                        <span class="stat-box__icon stat-box__icon--purple">Q</span>
+                        <p class="stat-box__value">10</p>
+                        <small class="stat-box__label">Total Quest.</small>
+                    </div>
+
+                    <!--*-->
+                    <div class="stat-box">
+                        <span class="stat-box__icon stat-box__icon--green">✔</span>
+                        <p class="stat-box__value">08</p>
+                        <small class="stat-box__label">Correct</small>
+                    </div>
+
+                    <!--*-->
+                    <div class="stat-box">
+                        <span class="stat-box__icon stat-box__icon--red">✖</span>
+                        <p class="stat-box__value">02</p>
+                        <small class="stat-box__label">Wrong</small>
+                    </div>
+            </main>
         </div>
+    </section>
 
-        <div class="btn-container">
-          <button class="btn-begin">Jogar</button>  
-        </div>
-      </section>
+    <script src="./js/main.js"></script>
+</body>
 
-      <section class="game-screen" class="hidden">
-        <p>Hello World!</p>
-      </section>
-
-      <section class="result-screen" class="hidden">
-        <p>Hello World!</p>
-      </section>
-    </main>
-  </body>
 </html>

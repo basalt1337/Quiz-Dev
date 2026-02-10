@@ -1,0 +1,33 @@
+.stat-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 30px;
+    display: grid;
+}
+
+.stat-box {
+    border-right: 1px solid #eee;
+}
+
+.stat-box__icon {
+    padding: 15px 40px 55px;
+    border-radius: 5px;
+}
+
+.stat-box__icon--purple {
+    background-color: blueviolet;
+}
+
+.stat-box__icon--green {
+    background-color: green;
+}
+
+.stat-box__icon--red {
+    background-color: red;
+}
+
+.stat-box__value {
+    border-right: 1px solid #eee;
+}
+
