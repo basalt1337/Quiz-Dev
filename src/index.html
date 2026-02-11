@@ -10,12 +10,71 @@
 </head>
 
 <body>
-    <section id="playScreen" class="screen play-screen">
+    <section id="playScreen" class="screen play-screen hidden">
         <h1 class="play-screen__title">Dev Quiz</h1>
         <img class="play-screen__icon" src="./assets/image/quizlogo.png">
         <button class="btn play-screen__btn-play">Jogar</button>
     </section>
-
+    <section class="game-screen"> <!-- Tela do quiz -->
+          <header class="game-header">
+            <nav class="nav-menu">
+              <div class="nav-menu__brand">
+                <img src="./image/joystick-icon.png" class="nav-menu__icon">
+                <h3 class="nav-menu__title">Quiz Dev</h3>
+              </div>
+              <div class="nav-menu__list">
+                <a class="nav-menu__item" href="">Home</a>
+                <a class="nav-menu__item" href="">About</a>
+                <a class="nav-menu__item" href="">Contact Us</a>
+                <p>Adicionar imagem aqui</p>
+                </div>
+            </nav>
+          </header>
+          <label class="progress-bar"> <!-- Barra de progresso -->
+              Teste: <progress value="50" max="100"> 50% </progress>
+            </label>
+          <div class="container-game">
+            <div class="left-column">
+              <div class="question-card">
+                <p id="question-text" class="question-card__text"><b>Question 5/10:</b> What does HTML stand for?</p> <!--Texto mockado-->
+                <input type="radio" id="answer1" class="question-card__input" name="answers" value="answer1">  
+                <label for="answer1" class="question-card__label">Answer 1</label><br>
+                <input type="radio" id="answer2" class="question-card__input" name="answers" value="answer2">  
+                <label for="answer2" class="question-card__label">Answer 2</label><br>
+                <input type="radio" id="answer3" class="question-card__input" name="answers" value="answer3">  
+                <label for="answer3" class="question-card__label">Answer 3</label><br>
+                <input type="radio" id="answer4" class="question-card__input" name="answers" value="answer4">  
+                <label for="answer4" class="question-card__label">Answer 4</label><br>
+                <input type="radio" id="answer5" class="question-card__input" name="answers" value="answer5">  
+                <label for="answer5" class="question-card__label">Answer 5</label><br>
+              </div>
+              <div class="game-controls">
+                <button id="prev-button" class="game-controls__btn game-controls__btn--prev">Previous</button> <!-- Bloco + Elemento + Modificador -->
+                <button id="submit-button" class="game-controls__btn game-controls__btn--sub">Submit</button> <!-- Bloco + Elemento + Modificador -->
+              </div>
+            </div>
+          </div>
+          <div class="score-card">
+            <h2 id="percentage-text" class="score-card__percentage">83.3%</h2>
+            <p id="hits-text" class="score-card__hits">You got 5 answers correct</p>
+          </div>
+          <div class="container-answers">
+            <nav class="right-column">
+              <ol class="question-track">
+                <li class="question-track__item">Question 1</li>
+                <li class="question-track__item">Question 2</li>
+                <li class="question-track__item">Question 3</li>
+                <li class="question-track__item">Question 4</li>
+                <li class="question-track__item question-track__item-current">Question 5</li> <!--Marcador da questão mockado-->
+                <li class="question-track__item">Question 6</li>
+                <li class="question-track__item">Question 7</li>
+                <li class="question-track__item">Question 8</li>
+                <li class="question-track__item">Question 9</li>
+                <li class="question-track__item">Question 10</li>
+              </ol>
+          </nav>
+          </div>
+      </section>
     <section id="winScreen" class="screen win-screen hidden">
         <header class="win-screen__header">
             <h1 class="win-screen__title">Quiz Summary</h1>

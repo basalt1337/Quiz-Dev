@@ -41,6 +41,158 @@
   color: white;
 }
 
+.game-header{
+  background-color: #E0AAFF;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width:100vw;
+  border-radius: 5px;
+  display: flex;
+  border: 2px solid #5915C7;
+  border-radius: 8px;
+
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+.nav-menu__list{
+   display: flex;
+   gap: 10px;
+   padding: 10px;
+   align-items: center;
+   background-color: ;
+}
+
+.nav-menu__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu__title {
+    margin: 0;
+    font-size:2ch;
+}
+
+.nav-menu__icon {
+    width: 60px;
+    height: auto;
+}
+
+.container-game{
+    width: 85vw;
+    min-height: 80%;
+    margin: 0 auto;
+    background-color: #E0AAFF;
+    border: 2px solid #5915C7;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.progress-bar{
+   width: 85vw;
+   margin: 60px auto 10px auto;
+   padding: 15px;
+   align-items: center;
+   accent-color: rgb(255, 0, 132);
+   background-color: #E0AAFF;
+   border: 2px solid #5915C7;
+   border-radius: 8px;
+
+}
+
+.question-card__text{
+    padding: 10px;
+}
+.container-answers{
+    width: 15vw;
+    height: 50px;
+    right: 20px;
+    padding: 5px;
+    top: 200px;
+
+}
+
+.question-card__input{
+    appearance: none;
+    top: 10px;
+    right: 10px;
+}
+.question-card__label {
+    display: block;       
+    width: 85%;          
+    padding: 15px;     
+    background-color: #7763da; 
+    color: white;    
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.question-card__input:checked + .question-card__label {
+    background-color: #dbeafe; 
+    border-color: #3b82f6;
+    color: #1e40af;   
+    font-weight: bold;
+}
+
+.score-card{
+    top: 60px;
+    right: 20px;
+    border-radius: 5%;
+    padding: 10px;
+    width: 230px;
+    height: 125px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #5915C7;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #E0AAFF;
+}
+.question-track__item {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 5px;
+    background-color: #E0AAFF;
+    border: 2px solid #5915C7;
+}
+
+.question-track__item-current{
+    border: 2px solid rgb(48, 153, 106);
+    background-color: #3a916d;
+}
+
+.game-controls{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px; 
+    margin-top: 125px;
+    padding-right: 20px;
+}
+.game-controls__btn{
+    gap: 10px;   
+    width: 15%;    
+    padding: 10px;        
+    background-color: #7763da; 
+    color: white;    
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-controls__btn--prev{
+    background-color: #ffffff;
+    color: #333;
+}
+
 .win-screen__title {
   justify-content: center;
   align-items: center;
