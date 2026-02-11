@@ -25,15 +25,13 @@
   background-color: #00000086;
   text-shadow: 2px 2px 2px black;
   box-shadow: 0px 0px 20px white;
-  transition: 2ms background-color;
-  transition: 0.9s padding;
-  transition: 0.9s font-size;
-  font-size: 2rem;
-  color: #630fff;
+  transition: all 0.3s ease-out;
   padding: 20px 100px;
   border-radius: 12px;
-  height: 100px;
   cursor: pointer;
+  font-size: 2rem;
+  color: #630fff;
+  height: 100px;
 }
 
 .play-screen__btn-play:hover {
@@ -66,4 +64,22 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 80px;
+}
+
+.result-card__return-btn {
+  transition: text-shadow 0.3s ease-out;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 20px 120px;
+  background-color: blue;
+  padding: 20px 90px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  margin: 20px;
+}
+
+.result-card__return-btn:hover {
+  text-shadow: 0px 0px 20px white;
+  background-color: darkblue;
+  border-radius: 120px 20px;
 }

@@ -5,53 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="icon" href="/src/image/dev-icon.png" type="image/png">
+    <link rel="icon" href="./assets/image/dev-icon.png" type="image/png">
     <title>Dev Quiz</title>
 </head>
 
 <body>
     <section id="playScreen" class="screen play-screen">
-            <h1 class="play-screen__title">Dev Quiz</h1>
-            <img class="play-screen__icon" src="../src/image/quizlogo.png">
-            <button class="play-screen__btn-play">Jogar</button>
+        <h1 class="play-screen__title">Dev Quiz</h1>
+        <img class="play-screen__icon" src="./assets/image/quizlogo.png">
+        <button class="btn play-screen__btn-play">Jogar</button>
     </section>
 
     <section id="winScreen" class="screen win-screen hidden">
-            <header class="win-screen__header">
-                <h1 class="win-screen__title">Quiz Summary</h1>
-            </header>
+        <header class="win-screen__header">
+            <h1 class="win-screen__title">Quiz Summary</h1>
+        </header>
 
-            <main class="result-card">
-                <div class="result-card__trophy">🏆</div>
-                <h2 class="result-card__title">Congratulations!</h2>
-                <p class="result-card__score">You've scored <span>+80</span> points</p>
+        <main class="result-card">
+            <div class="result-card__trophy">🏆</div>
+            <h2 class="result-card__title">Congratulations!</h2>
+            <p class="result-card__score">You've scored <span>+80</span> points</p>
 
-                <div class="stat-grid">
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <span class="stat-box__icon stat-box__icon--purple">Q</span>
+                    <p class="stat-box__value">10</p>
+                    <small class="stat-box__label">Total Quest.</small>
+                </div>
 
-                    <div class="stat-box">
-                        <span class="stat-box__icon stat-box__icon--purple">Q</span>
-                        <p class="stat-box__value">10</p>
-                        <small class="stat-box__label">Total Quest.</small>
-                    </div>
+                <!--*-->
+                <div class="stat-box">
+                    <span class="stat-box__icon stat-box__icon--green">✔</span>
+                    <p class="stat-box__value">08</p>
+                    <small class="stat-box__label">Correct</small>
+                </div>
 
-                    <!--*-->
-                    <div class="stat-box">
-                        <span class="stat-box__icon stat-box__icon--green">✔</span>
-                        <p class="stat-box__value">08</p>
-                        <small class="stat-box__label">Correct</small>
-                    </div>
+                <!--*-->
+                <div class="stat-box">
+                    <span class="stat-box__icon stat-box__icon--red">✖</span>
+                    <p class="stat-box__value">02</p>
+                    <small class="stat-box__label">Wrong</small>
+                </div>
+            </div>
 
-                    <!--*-->
-                    <div class="stat-box">
-                        <span class="stat-box__icon stat-box__icon--red">✖</span>
-                        <p class="stat-box__value">02</p>
-                        <small class="stat-box__label">Wrong</small>
-                    </div>
-            </main>
-        </div>
+            <button class="btn result-card__return-btn">Return</button>
+        </main>
     </section>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
