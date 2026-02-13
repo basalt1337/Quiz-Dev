@@ -12,7 +12,7 @@
 <body>
     <section id="playScreen" class="screen play-screen">
         <h1 class="play-screen__title">Dev Quiz</h1>
-        <img class="play-screen__icon" src="./assets/image/quizlogo.png">
+        <img class="play-screen__icon" src="./assets/image/quizlogo.png" draggable="false">
         <button class="btn play-screen__btn-play">Jogar</button>
     </section>
 
@@ -24,26 +24,28 @@
         <main class="result-card">
             <div class="result-card__trophy">🏆</div>
             <h2 class="result-card__title">Congratulations!</h2>
-            <p class="result-card__score">You've scored <span>+80</span> points</p>
+            <p class="result-card__score">You've scored +<span class="result-card--value">0</span> points</p>
+
+            <button class="btn-test">Click Here</button>
 
             <div class="stat-grid">
                 <div class="stat-box">
                     <span class="stat-box__icon stat-box__icon--purple">Q</span>
-                    <p class="stat-box__value">10</p>
+                    <p class="stat-box--value-questions">0</p>
                     <small class="stat-box__label">Total Quest.</small>
                 </div>
 
                 <!--*-->
                 <div class="stat-box">
                     <span class="stat-box__icon stat-box__icon--green">✔</span>
-                    <p class="stat-box__value">08</p>
+                    <p class="stat-box--value-correct">0</p>
                     <small class="stat-box__label">Correct</small>
                 </div>
 
                 <!--*-->
                 <div class="stat-box">
                     <span class="stat-box__icon stat-box__icon--red">✖</span>
-                    <p class="stat-box__value">02</p>
+                    <p class="stat-box--value-wrong">0</p>
                     <small class="stat-box__label">Wrong</small>
                 </div>
             </div>
@@ -53,6 +55,7 @@
     </section>
 
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/punctuation.js"></script>
 </body>
 
 </html>

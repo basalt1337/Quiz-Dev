@@ -1,0 +1,18 @@
+.btn-test {
+  font-family: "Archivo Black", sans-serif;
+  box-shadow: 0px 2px 10px black;
+  background-color: blueviolet;
+  transition: all 0.4s ease;
+  border-radius: 20px 20px;
+  color: antiquewhite;
+  padding: 10px 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-test:hover {
+    background-color: blueviolet;
+    padding: 15px 15px;
+    font-size: 17px;
+    color: white;
+}
