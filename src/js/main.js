@@ -1,6 +1,7 @@
 import { playSound } from './sound.js';
 import { correctQuestion } from './punctuation.js';
 import { punctuation } from './punctuation.js';
+import { reloadAnswers } from './apiData.js';
 
 const currentPoints = document.querySelector('.result-card--value');
 const currentQuestions = document.querySelector('.stat-box--value-questions');
@@ -11,6 +12,7 @@ currentCorrectQuestions.innerHTML = 8;
 
 const currentWrongQuestions = document.querySelector('.stat-box--value-wrong');
 currentWrongQuestions.innerHTML = 2;
+import { reloadAnswers } from "./apiData.js";
 
 const allScreens = document.querySelectorAll('.screen');
 
@@ -25,8 +27,16 @@ function goTo (idTarget) {
 
 const initialBtn = document.querySelector('.play-screen__btn-play');
 initialBtn.addEventListener('click', () => {
+    // reloadAnswers();
     playSound('click');
     goTo('winScreen');
+});
+
+const gameBtn = document.querySelector('.game-controls__btn--sub');
+gameBtn.addEventListener('click', () => {
+    playSound('click');
+    goTo('winScreen');
+    goTo('playScreen');
 });
 
 const homeBtn = document.querySelector('.result-card__return-btn');
@@ -38,4 +48,6 @@ homeBtn.addEventListener('click', () => {
 const btnTest = document.querySelector('.btn-test');
 btnTest.addEventListener('click', () => {
     currentPoints.innerHTML = punctuation(correctQuestion());
+    goTo('playScreen');
 });
+
