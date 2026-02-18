@@ -1,14 +1,22 @@
-let multiplyXP = 1.5;
-let point = 0;
+let multiplyXP = 3.5;
+export let points = 0;
+export let wrong = 0;
 
 export const punctuation = (points) => points * multiplyXP;
 
+export const percentPoints = (points) => points * 10;
+
 export const correctQuestion = () => {
-    point += 1;
-    return point;
+    points++;
+    return points;
 }
 
 export const wrongQuestion = () => {
-    point -= 1;
-    return point;
+    wrong++;
+    return wrong;
+}
+
+export const reset = () => {
+    wrong = 0;
+    points = 0;
 }

@@ -1,3 +1,39 @@
 .hidden {
-    display: none !important;
+  display: none !important;
+}
+
+.screen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+}
+
+.win-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.question-card__input:checked + .question-card__label {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+  font-weight: bold;
+}
+
+.question-track__item-current {
+  border: 2px solid var(--color-success);
+  background-color: var(--color-success);
+  color: var(--color-white);
 }

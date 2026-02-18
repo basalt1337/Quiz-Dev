@@ -11,123 +11,39 @@
 
   <body>
     <section id="playScreen" class="screen play-screen">
-        <h1 class="play-screen__title">Dev Quiz</h1>
-        <img class="play-screen__icon" src="./assets/image/quizlogo.png" draggable="false">
-        <button class="btn play-screen__btn-play">Jogar</button>
+      <h1 class="play-screen__title">Dev Quiz</h1>
+      <img
+        class="play-screen__icon"
+        src="./assets/image/quizlogo.png"
+        draggable="false"
+      />
+      <button class="btn play-screen__btn-play">Play</button>
     </section>
 
-    <section class="game-screen hidden">
-      <!-- Tela do quiz -->
-      <header class="game-header">
-        <nav class="nav-menu">
-          <div class="nav-menu__brand">
-            <img
-              src="./assets/image/joystick-icon.png"
-              class="nav-menu__icon"
-            />
-            <h3 class="nav-menu__title">Quiz Dev</h3>
-          </div>
-
-          <div class="nav-menu__list">
-            <a class="nav-menu__item" href="">Home</a>
-            <a class="nav-menu__item" href="">About</a>
-            <a class="nav-menu__item" href="">Contact Us</a>
-          </div>
-        </nav>
-      </header>
-
-      <label class="progress-bar">
-        <!-- Barra de progresso -->
-        Teste: <progress value="50" max="100">0%</progress>
-      </label>
-
+    <section id="gameScreen" class="screen game-screen hidden">
       <div class="container-game">
-        <div class="left-column">
-          <div class="question-card">
-            <p id="question-text" class="question-card__text">
-              <b>Question 0/10:</b> What does HTML stand for?
-            </p>
-            <!--Texto mockado-->
-            <input
-              type="radio"
-              id="answer1"
-              class="question-card__input"
-              name="answers"
-              value="answer1"
-            />
-            <label for="answer1" class="question-card__label">Answer 1</label
-            ><br />
-            <input
-              type="radio"
-              id="answer2"
-              class="question-card__input"
-              name="answers"
-              value="answer2"
-            />
-            <label for="answer2" class="question-card__label">Answer 2</label
-            ><br />
-            <input
-              type="radio"
-              id="answer3"
-              class="question-card__input"
-              name="answers"
-              value="answer3"
-            />
-            <label for="answer3" class="question-card__label">Answer 3</label
-            ><br />
-            <input
-              type="radio"
-              id="answer4"
-              class="question-card__input"
-              name="answers"
-              value="answer4"
-            />
-            <label for="answer4" class="question-card__label">Answer 4</label
-            ><br />
-            <input
-              type="radio"
-              id="answer5"
-              class="question-card__input"
-              name="answers"
-              value="answer5"
-            />
-            <label for="answer5" class="question-card__label">Answer 5</label
-            ><br />
-          </div>
+        <div class="score-card">
+          <h2 id="percentage-text" class="score-card__percentage"><span class="percent-value">0</span>%</h2>
+          <p id="hits-text" class="score-card__hits">
+            You got 0 answers correct
+          </p>
+        </div>
+
+        <div class="question-card">
+          <p id="question-text" class="question-card__text">Question Loading</p>
+
+          <div class=".question-track__item" id="answers-container"></div>
+
           <div class="game-controls">
             <button
               id="submit-button"
               class="btn game-controls__btn game-controls__btn--sub"
+              disabled
             >
               Submit
             </button>
           </div>
         </div>
-      </div>
-
-      <div class="score-card">
-        <h2 id="percentage-text" class="score-card__percentage">0%</h2>
-        <p id="hits-text" class="score-card__hits">You got 0 answers correct</p>
-      </div>
-
-      <div class="container-answers">
-        <nav class="right-column">
-          <ol class="question-track">
-            <li class="question-track__item">Question 1</li>
-            <li class="question-track__item">Question 2</li>
-            <li class="question-track__item">Question 3</li>
-            <li class="question-track__item">Question 4</li>
-            <li class="question-track__item question-track__item-current">
-              Question 5
-            </li>
-            <!--Marcador da questão mockado-->
-            <li class="question-track__item">Question 6</li>
-            <li class="question-track__item">Question 7</li>
-            <li class="question-track__item">Question 8</li>
-            <li class="question-track__item">Question 9</li>
-            <li class="question-track__item">Question 10</li>
-          </ol>
-        </nav>
       </div>
     </section>
 
@@ -137,43 +53,36 @@
       </header>
 
       <main class="result-card">
-        <div class="result-card__trophy">🏆</div>
+        <img class="result-card__trophy-icon" src="./assets/image/trophy.png"></img>
         <h2 class="result-card__title">Congratulations!</h2>
-        <p class="result-card__score">You've scored <span>+80</span> points</p>
-        <main class="result-card">
-            <div class="result-card__trophy">🏆</div>
-            <h2 class="result-card__title">Congratulations!</h2>
-            <p class="result-card__score">You've scored +<span class="result-card--value">0</span> points</p>
+        <p class="result-card__score">
+          You've scored +<span class="result-card--value">0</span> points
+        </p>
 
-            <button class="btn-test">Click Here</button>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <span class="stat-box__icon stat-box__icon--purple">Q</span>
+            <p class="stat-box--value-questions">0</p>
+            <small class="stat-box__label">Total Quest.</small>
+          </div>
 
-            <div class="stat-grid">
-                <div class="stat-box">
-                    <span class="stat-box__icon stat-box__icon--purple">Q</span>
-                    <p class="stat-box--value-questions">0</p>
-                    <small class="stat-box__label">Total Quest.</small>
-                </div>
+          <div class="stat-box">
+            <span class="stat-box__icon stat-box__icon--green">✔</span>
+            <p class="stat-box--value-correct">0</p>
+            <small class="stat-box__label">Correct</small>
+          </div>
 
-                <!--*-->
-                <div class="stat-box">
-                    <span class="stat-box__icon stat-box__icon--green">✔</span>
-                    <p class="stat-box--value-correct">0</p>
-                    <small class="stat-box__label">Correct</small>
-                </div>
-
-                <!--*-->
-                <div class="stat-box">
-                    <span class="stat-box__icon stat-box__icon--red">✖</span>
-                    <p class="stat-box--value-wrong">0</p>
-                    <small class="stat-box__label">Wrong</small>
-                </div>
-            </div>
+          <div class="stat-box">
+            <span class="stat-box__icon stat-box__icon--red">✖</span>
+            <p class="stat-box--value-wrong">0</p>
+            <small class="stat-box__label">Wrong</small>
+          </div>
+        </div>
 
         <button class="btn result-card__return-btn">Return</button>
       </main>
     </section>
 
     <script type="module" src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>
