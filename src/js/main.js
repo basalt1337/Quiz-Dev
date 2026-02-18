@@ -9,7 +9,6 @@ import {
   reset,
 } from "./punctuation.js";
 import {
-  loadMockData,
   data,
   totalQuestions,
   reloadAnswers,
