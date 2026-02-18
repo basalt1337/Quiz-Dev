@@ -1,0 +1,85 @@
+.screen {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.container-game {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  width: 100%;
+  margin: var(--spacing-md) auto;
+  padding: var(--spacing-md);
+  min-height: calc(100vh - 180px);
+}
+
+@media (min-width: 768px) {
+  .container-game {
+    grid-template-columns: 2fr 1fr;
+    width: 90vw;
+    max-width: 1200px;
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--spacing-xs);
+  }
+
+  .score-card {
+    width: 230px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+    margin-top: var(--spacing-md);
+  }
+
+  .play-screen__title {
+    font-size: 1.8rem;
+  }
+
+  .play-screen__icon img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .play-screen__btn-play {
+    padding: 15px 50px;
+    font-size: 1.2rem;
+  }
+
+  .play-screen__btn-play:hover {
+    padding: 20px 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-game {
+    grid-template-columns: 2fr 250px;
+    grid-template-rows: auto auto;
+  }
+
+  .score-card {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-game {
+    width: 95vw;
+    margin: var(--spacing-md) auto;
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .score-card {
+    width: 100%;
+    height: auto;
+    margin-top: var(--spacing-md);
+  }
+}

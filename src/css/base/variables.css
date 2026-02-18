@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap");
+
+:root {
+  /* Colors */
+  --color-primary: #8a63d2;
+  --color-secondary: #e0aaff;
+  --color-accent: #5915c7;
+  --color-button: #7763da;
+  --color-success: #3a916d;
+  --color-white: #ffffff;
+  --color-text-dark: #333;
+
+  /* Typography */
+  --font-primary: "Comic Sans MS", cursive;
+  --font-secondary: "Archivo Black", sans-serif;
+  --font-terciary: "Playwrite NZ Basic", cursive;
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  font-family: var(--font-terciary);
+}
+
+button {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

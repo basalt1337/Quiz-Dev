@@ -1,18 +1,88 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="icon" href="/src/image/dev-icon.png" type="image/png">
-    <title>Dev Quiz</title>
-</head>
+<!doctype html>
 
-<body>
-    <div class="container">
-            <h1>Dev Quiz</h1>
-            <img src="../src/image/quizlogo.png">
-            <button>Jogar</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="icon" href="./assets/image/dev-icon.png" type="image/png" />
+    <title>Dev Quiz</title>
+  </head>
+
+  <body>
+    <section id="playScreen" class="screen play-screen">
+      <h1 class="play-screen__title">Dev Quiz</h1>
+      <img
+        class="play-screen__icon"
+        src="./assets/image/quizlogo.png"
+        draggable="false"
+      />
+      <button class="btn play-screen__btn-play">Play</button>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <div class="container-game">
+        <div class="score-card">
+          <h2 id="percentage-text" class="score-card__percentage"><span class="percent-value">0</span>%</h2>
+          <p id="hits-text" class="score-card__hits">
+            You got 0 answers correct
+          </p>
         </div>
-</body>
+
+        <div class="question-card">
+          <p id="question-text" class="question-card__text">Question Loading</p>
+
+          <div class=".question-track__item" id="answers-container"></div>
+
+          <div class="game-controls">
+            <button
+              id="submit-button"
+              class="btn game-controls__btn game-controls__btn--sub"
+              disabled
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="winScreen" class="screen win-screen hidden">
+      <header class="win-screen__header">
+        <h1 class="win-screen__title">Quiz Summary</h1>
+      </header>
+
+      <main class="result-card">
+        <img class="result-card__trophy-icon" src="./assets/image/trophy.png"></img>
+        <h2 class="result-card__title">Congratulations!</h2>
+        <p class="result-card__score">
+          You've scored +<span class="result-card--value">0</span> points
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat-box">
+            <span class="stat-box__icon stat-box__icon--purple">Q</span>
+            <p class="stat-box--value-questions">0</p>
+            <small class="stat-box__label">Total Quest.</small>
+          </div>
+
+          <div class="stat-box">
+            <span class="stat-box__icon stat-box__icon--green">✔</span>
+            <p class="stat-box--value-correct">0</p>
+            <small class="stat-box__label">Correct</small>
+          </div>
+
+          <div class="stat-box">
+            <span class="stat-box__icon stat-box__icon--red">✖</span>
+            <p class="stat-box--value-wrong">0</p>
+            <small class="stat-box__label">Wrong</small>
+          </div>
+        </div>
+
+        <button class="btn result-card__return-btn">Return</button>
+      </main>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>
