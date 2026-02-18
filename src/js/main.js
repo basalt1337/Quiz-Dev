@@ -51,8 +51,7 @@ const initialBtn = document.querySelector(".play-screen__btn-play");
 initialBtn.addEventListener("click", () => {
   playBackground();
   playSound("click");
-  // reloadAnswers();
-  loadMockData();
+  reloadAnswers();
   renderQuestionCard(data[currentQuestionIndex]);
   goTo("gameScreen");
 });
