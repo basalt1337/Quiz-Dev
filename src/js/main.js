@@ -47,10 +47,10 @@ function goTo(idTarget) {
 }
 
 const initialBtn = document.querySelector(".play-screen__btn-play");
-initialBtn.addEventListener("click", () => {
+initialBtn.addEventListener("click", async () => {
   playBackground();
   playSound("click");
-  reloadAnswers();
+  await reloadAnswers();
   renderQuestionCard(data[currentQuestionIndex]);
   goTo("gameScreen");
 });
